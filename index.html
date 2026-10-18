@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>혈압측정기록지</title>
+<link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="혈압기록지">
+<meta name="theme-color" content="#004986">
+<link rel="manifest" href="manifest.webmanifest">
+
+<style>
+:root{--bg:#f3f6f5;--card:#fff;--ink:#17302b;--mute:#5d716c;--line:#d9e3e0;--sys:#c8443a;--dia:#1f6f8b;--ok:#2f8f5b;--warn:#d98a1c;--accent:#17302b;--accent-ink:#fff;--z0:#1d4e9e;--z1:#3a8fd6;--z2:#2f8f5b;--z3:#86a82a;--z4:#d9a21c;--z5:#e0742a;--z6:#d4452f;--z7:#b3202f;--z8:#7a1f6b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f1a18;--card:#17252a;--ink:#e6f0ed;--mute:#9bb0ab;--line:#2b3f3b;--sys:#ef7a6f;--dia:#5cb3d1;--ok:#5cc58a;--warn:#f0b04f;--accent:#e6f0ed;--accent-ink:#0f1a18;--z0:#6fa3ec;--z1:#7cc0f2;--z2:#5cc58a;--z3:#b4d65a;--z4:#f0c24f;--z5:#f59a5a;--z6:#ef7a6a;--z7:#f2677a;--z8:#d57fc6}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0f1a18;--card:#17252a;--ink:#e6f0ed;--mute:#9bb0ab;--line:#2b3f3b;--sys:#ef7a6f;--dia:#5cb3d1;--ok:#5cc58a;--warn:#f0b04f;--accent:#e6f0ed;--accent-ink:#0f1a18;--z0:#6fa3ec;--z1:#7cc0f2;--z2:#5cc58a;--z3:#b4d65a;--z4:#f0c24f;--z5:#f59a5a;--z6:#ef7a6a;--z7:#f2677a;--z8:#d57fc6}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",system-ui,-apple-system,"Malgun Gothic",sans-serif;line-height:1.5}
+main{max-width:760px;margin:0 auto;padding:20px 16px 48px}
+h1{font-size:1.5rem;margin:8px 0 4px}
+h2{font-size:1.05rem;margin:0 0 12px}
+.sub{color:var(--mute);margin:0 0 20px;font-size:.9rem}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(min-width:560px){.grid.g4{grid-template-columns:repeat(4,1fr)}}
+label{display:block;font-size:.82rem;color:var(--mute);margin-bottom:4px}
+input{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;min-height:44px}
+input:focus-visible,button:focus-visible{outline:2px solid var(--dia);outline-offset:2px}
+.full{grid-column:1/-1}
+button{font:inherit;cursor:pointer;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 12px;min-height:40px}
+button.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:700;width:100%;min-height:46px;margin-top:12px}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:10px}
+.tabs button{white-space:nowrap}
+.tabs button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}
+.stat{border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+.stat b{display:block;font-size:1.15rem}
+.stat span{font-size:.78rem;color:var(--mute)}
+.chartwrap{overflow-x:auto}
+svg{width:100%;height:auto;min-width:0;display:block}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.82rem;color:var(--mute);margin-top:6px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
+table{width:100%;min-width:620px;border-collapse:collapse;font-size:.9rem}
+th,td{text-align:center;vertical-align:middle;padding:8px 8px;border-bottom:1px solid var(--line)}
+th:nth-child(-n+4),td:nth-child(-n+4){white-space:nowrap}
+th{color:var(--mute);font-weight:500;font-size:.8rem}
+.tag{font-size:.75rem;padding:2px 8px;border-radius:99px;border:1px solid currentColor;white-space:nowrap}
+.empty{color:var(--mute);text-align:center;padding:28px 8px}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.note{font-size:.78rem;color:var(--mute);margin-top:10px}
+.zrow{display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.zchip{width:14px;height:36px;border-radius:4px;flex:none}
+.zrow b{display:block;font-size:.92rem}
+.zrow span{font-size:.8rem;color:var(--mute)}
+select{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;min-height:44px}
+select:focus-visible{outline:2px solid var(--dia);outline-offset:2px}
+.tm{display:flex;gap:6px}
+.tm input{flex:1.6;min-width:0}
+.tm select{flex:1;min-width:0}
+:root.custom{--z0:#1d4e9e;--z1:#3a8fd6;--z2:#2f8f5b;--z3:#86a82a;--z4:#d9a21c;--z5:#e0742a;--z6:#d4452f;--z7:#b3202f;--z8:#7a1f6b}
+.custom .tag{background:#fff}
+.custom .legend span{color:var(--ink)!important}
+.custom .chartwrap{background:#fff;border-radius:10px;padding:6px;--ink:#17302b;--mute:#5d716c;--line:#d9e3e0;--sys:#c8443a;--dia:#1f6f8b}
+.swrow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.sw{width:44px;height:44px;min-height:44px;padding:0;border:2px solid var(--line);border-radius:10px}
+.swrow button[aria-pressed="true"]{outline:3px solid var(--ink);outline-offset:2px}
+</style>
+</head>
+<body>
+<main>
+<h1>혈압측정기록지</h1>
+<p class="sub">측정값과 복약 시간을 입력하면 목록과 기간별 추이 그래프로 볼 수 있어요.</p>
+
+<section class="card" aria-labelledby="h-th">
+<h2 id="h-th">배경색</h2>
+<div class="swrow" id="swatches"></div>
+<p class="note">글자색은 배경색에 맞춰 흰색 또는 검정으로 자동 선택돼요.</p>
+</section>
+
+<section class="card" aria-labelledby="h-in">
+<h2 id="h-in">측정값 입력</h2>
+<div class="grid g4">
+<div class="full"><label for="dt">측정 날짜·시간</label><div class="tm"><input id="dt" type="date"><select id="dth" aria-label="시"></select><select id="dtm" aria-label="분"></select></div></div>
+<div><label for="sys">수축기(최고)</label><input id="sys" type="number" inputmode="numeric" min="60" max="260" placeholder="120"></div>
+<div><label for="dia">이완기(최저)</label><input id="dia" type="number" inputmode="numeric" min="30" max="160" placeholder="80"></div>
+<div><label for="pul">맥박(선택)</label><input id="pul" type="number" inputmode="numeric" min="30" max="220" placeholder="70"></div>
+<div style="grid-column:span 3"><label for="memo">메모(선택)</label><input id="memo" type="text" maxlength="60" placeholder="아침 식전, 운동 후 등"></div>
+</div>
+<button class="primary" id="save">저장</button>
+<div class="note" id="msg" role="status"></div>
+</section>
+
+<section class="card" aria-labelledby="h-md">
+<h2 id="h-md">복약 기록</h2>
+<div class="grid">
+<div class="full"><label for="mdt">약 먹은 날짜·시간</label><div class="tm"><input id="mdt" type="date"><select id="mdth" aria-label="시"></select><select id="mdtm" aria-label="분"></select></div></div>
+<div><label for="mname">약 이름(선택)</label><input id="mname" type="text" maxlength="40" placeholder="예: 아침약"></div>
+<div class="full"><label for="mnote">메모·주의사항(선택)</label><input id="mnote" type="text" maxlength="120" placeholder="예: 식후 30분, 복용 시 주의할 점"></div>
+</div>
+<button class="primary" id="medsave">복약 시간 저장</button>
+<div class="note" id="mmsg" role="status"></div>
+</section>
+
+<section class="card" aria-labelledby="h-vs">
+<h2 id="h-vs">병원 진료 기록</h2>
+<div class="grid">
+<div class="full"><label for="vdt">진료 날짜·시간</label><div class="tm"><input id="vdt" type="date"><select id="vdth" aria-label="시"></select><select id="vdtm" aria-label="분"></select></div></div>
+<div><label for="vhosp">병원·진료과(선택)</label><input id="vhosp" type="text" maxlength="40" placeholder="예: ○○내과"></div>
+<div><label for="vdis">병명</label><input id="vdis" type="text" maxlength="40" placeholder="진단받은 병명"></div>
+<div><label for="vdrug">처방 약 이름</label><input id="vdrug" type="text" maxlength="60" placeholder="처방전에 적힌 약 이름"></div>
+<div class="full"><label for="vnote">주의사항·메모</label><input id="vnote" type="text" maxlength="200" placeholder="예: 3개월 뒤 재진, 의사가 당부한 점"></div>
+</div>
+<button class="primary" id="vsave">진료 기록 저장</button>
+<div class="note" id="vmsg" role="status"></div>
+</section>
+
+<section class="card" aria-labelledby="h-ch">
+<h2 id="h-ch">추이 그래프</h2>
+<label style="display:flex;gap:8px;align-items:center;font-size:.88rem;color:var(--ink);margin-bottom:8px"><input type="checkbox" id="tl" checked style="width:auto;min-height:0">추이선 표시(굵은 점선)</label>
+<div class="tabs" id="tabs" role="group" aria-label="기간 선택"></div>
+<div class="row" id="ctl" style="margin-bottom:10px;align-items:center"></div>
+<div class="stats" id="stats"></div>
+<div class="chartwrap" id="chart"></div>
+<div class="legend"><span><i class="dot" style="background:var(--sys)"></i>수축기</span><span><i class="dot" style="background:var(--dia)"></i>이완기</span><span style="color:var(--dia)">▲ 복약한 구간</span><span style="color:var(--z8)">◆ 병원 진료</span><span>굵은 점선: 추이선</span><span>점선: 정상 상한(120/80), 고혈압 기준(140/90)</span><span>배경색: 수축기 기준 구간 · 점 색: 혈압 단계</span></div>
+<div class="note" id="bucketnote"></div>
+</section>
+
+<section class="card" aria-labelledby="h-zn">
+<h2 id="h-zn">혈압 구간표</h2>
+<div id="zones"></div>
+<p class="note">저혈압 두 구간은 의학적 공식 단계가 아니라 설명용 구분이에요. 두 수치 중 더 높은 위험 단계로 판단해요. 가슴 통증·호흡곤란·마비·시야 장애가 있거나 저혈압으로 실신·의식 저하·식은땀이 나면 수치와 관계없이 응급상황일 수 있어요(119).</p>
+</section>
+
+<section class="card" aria-labelledby="h-gd">
+<h2 id="h-gd">사용 방법 · 측정 수칙 · 주의사항</h2>
+<details style="margin-bottom:8px"><summary style="cursor:pointer;font-weight:700">사용 방법</summary><ol style="margin:8px 0 0;padding-left:20px;font-size:.9rem">
+<li>위 카드에서 측정 날짜·시간(시·분은 스크롤로 선택)과 혈압을 입력하고 저장해요.</li>
+<li>약을 먹었으면 복약 기록에, 병원에 갔으면 진료 기록에 날짜와 약 이름·병명·주의사항을 적어 두세요.</li>
+<li>그래프의 기간 탭(1일·3일·1주·1개월·분기·반기·1년·3년·5년·10년, 일별·시간대별)을 눌러 추이를 확인해요.</li>
+<li>기록 목록의 수정·삭제 버튼으로 고칠 수 있어요. 삭제는 여러 단계 확인을 거쳐요.</li>
+<li>가끔 맨 아래 백업 파일을 저장해 두세요. 기록은 이 기기의 브라우저에만 저장돼요.</li></ol></details>
+<details style="margin-bottom:8px"><summary style="cursor:pointer;font-weight:700">집에서 혈압 재는 수칙 (일반적인 권장)</summary><ul style="margin:8px 0 0;padding-left:20px;font-size:.9rem">
+<li>측정 30분 전에는 커피·담배·운동을 피하고 화장실을 다녀오세요.</li>
+<li>등을 기댓 채 편히 앉아 5분 정도 쉬어요. 다리는 꼬지 말고 발을 바닥에 두세요.</li>
+<li>팔을 심장 높이에 둔 상태에서 맨팔에 커프를 감고, 측정 중에는 말하지 마세요.</li>
+<li>같은 팔을 같은 시간대에 재세요. 보통 아침(일어난 뒤 1시간 이내)과 저녁(자기 전)에 재요.</li>
+<li>1~2분 간격으로 2번 재어 평균을 기록하면 더 정확해요. 한 번만 높게 나왔다면 다시 재어 보세요.</li>
+<li>약을 먹는 분은 약 먹기 전·후 측정 시간을 의료진이 정한 대로 따르세요.</li></ul></details>
+<details><summary style="cursor:pointer;font-weight:700">주의사항</summary><ul style="margin:8px 0 0;padding-left:20px;font-size:.9rem">
+<li>색상 구간은 참고용이에요. 두 수치 중 더 높은 위험 단계로 판단해요.</li>
+<li>이 앱은 기록과 추이 확인을 돕는 도구이며 진단·치료를 대신하지 않아요.</li>
+<li>약은 의사·약사 지시 없이 임의로 중단하거나 바꾸지 마세요.</li>
+<li>가슴 통증, 호흡곤란, 마비, 시야 장애, 실신, 의식 저하, 식은땀이 있으면 수치와 관계없이 119에 연락하세요.</li>
+<li>혈압이 계속 높게 나오면 진료를 받으세요.</li>
+<li>기록은 이 기기에만 저장되어 브라우저 데이터를 지우면 사라져요. 백업을 자주 하세요.</li></ul></details>
+</section>
+
+<section class="card" aria-labelledby="h-ls">
+<h2 id="h-ls">기록 목록</h2>
+<div id="list"></div>
+<div class="row" style="margin-top:12px">
+<button id="demo">예시 데이터 넣기</button>
+<button id="clear">전체 삭제</button>
+</div>
+<div id="cpanel" role="alertdialog" aria-live="assertive" style="display:none;margin-top:12px;border:2px solid var(--z7);border-radius:10px;padding:12px"><div id="cmsg" style="font-weight:700;margin-bottom:10px"></div><div class="row"><button id="cyes"></button><button id="cno">취소</button></div></div>
+<p class="note">이 기기의 브라우저에만 저장돼요. 기록은 참고용이며 진단이나 치료를 대신하지 않아요. 혈압이 계속 높거나 어지러움·가슴 통증이 있으면 의료진과 상의하세요.</p>
+</section>
+
+<section class="card" aria-labelledby="h-bk">
+<h2 id="h-bk">백업·복원</h2>
+<div class="row"><button id="bkout">백업 파일 저장</button><button id="bkin">백업 파일 불러오기</button><input id="bkfile" type="file" accept=".json,application/json" style="display:none"></div>
+<div class="note" id="bkmsg" role="status"></div>
+<p class="note">기록은 이 기기에만 저장돼요. 백업 파일로 다른 기기로 옮기거나 보관할 수 있고, 불러올 때는 이미 있는 기록을 지우지 않고 추가만 돼요. 백업 파일에는 건강 기록이 그대로 들어 있으니 공유할 때 주의하세요. <a href="privacy.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">개인정보처리방침</a></p>
+</section>
+</main>
+
+<script>
+(function(){
+var KEY="bp-records-v1";
+var recs=[];
+function load(){try{var s=localStorage.getItem(KEY);recs=s?JSON.parse(s):[]}catch(e){recs=[]}}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(recs))}catch(e){}}
+var $=function(i){return document.getElementById(i)};
+var pad=function(n){return n<10?"0"+n:""+n};
+function localISO(d){return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())+"T"+pad(d.getHours())+":"+pad(d.getMinutes())}
+function dstr(d){return d.getFullYear()+"-"+pad(d.getMonth()+1)+"-"+pad(d.getDate())}
+
+var RANGES=[
+ {k:"day",label:"일별",days:1,b:"day"},
+ {k:"hour",label:"시간대별",days:30,b:"day"},
+ {k:"d1",label:"1일",days:1,b:"day"},
+ {k:"d3",label:"3일",days:3,b:"day"},
+ {k:"w",label:"1주",days:7,b:"day"},
+ {k:"m",label:"1개월",days:30,b:"day"},
+ {k:"q",label:"분기",days:91,b:"week"},
+ {k:"h",label:"반기",days:182,b:"week"},
+ {k:"y1",label:"1년",days:365,b:"month"},
+ {k:"y3",label:"3년",days:1095,b:"month"},
+ {k:"y5",label:"5년",days:1825,b:"quarter"},
+ {k:"y10",label:"10년",days:3650,b:"half"}
+];
+var BN={day:"일별 평균",week:"주별 평균",month:"월별 평균",quarter:"분기별 평균",half:"반기별 평균"};
+var cur="w";
+
+function bucket(d,b){
+ var y=d.getFullYear(),m=d.getMonth();
+ if(b==="day")return{key:dstr(d),label:(m+1)+"/"+d.getDate()};
+ if(b==="week"){var x=new Date(d);var wd=(x.getDay()+6)%7;x.setDate(x.getDate()-wd);return{key:dstr(x),label:(x.getMonth()+1)+"/"+x.getDate()}}
+ if(b==="month")return{key:y+"-"+pad(m+1),label:String(y).slice(2)+"."+pad(m+1)};
+ if(b==="quarter"){var q=Math.floor(m/3)+1;return{key:y+"-Q"+q,label:String(y).slice(2)+" Q"+q}}
+ var h=m<6?1:2;return{key:y+"-H"+h,label:String(y).slice(2)+" "+(h===1?"상":"하")}
+}
+function avg(a){return a.reduce(function(s,v){return s+v},0)/a.length}
+
+function inRange(r){
+ var from=new Date();from.setHours(0,0,0,0);from.setDate(from.getDate()-r.days+1);
+ return recs.filter(function(x){return !x.k&&new Date(x.t)>=from}).sort(function(a,b){return a.t<b.t?-1:1});
+}
+function medsIn(r){
+ var from=new Date();from.setHours(0,0,0,0);from.setDate(from.getDate()-r.days+1);
+ return recs.filter(function(x){return x.k==="med"&&new Date(x.t)>=from});
+}
+function visitsIn(r){
+ var from=new Date();from.setHours(0,0,0,0);from.setDate(from.getDate()-r.days+1);
+ return recs.filter(function(x){return x.k==="visit"&&new Date(x.t)>=from});
+}
+
+var ZONES=[
+{t:"심한 저혈압 의심",r:"90 미만 / 60 미만",n:"어지럼·실신·쇼크 증상 주의"},
+{t:"저혈압",r:"90 미만 또는 60 미만",n:"증상과 평소 혈압 확인"},
+{t:"최적 혈압",r:"120 미만 / 80 미만",n:"정상 범위 중 가장 바람직"},
+{t:"정상 혈압",r:"120~129 / 80~84",n:"정기적인 혈압 측정"},
+{t:"주의 혈압",r:"130~139 / 85~89",n:"운동·식사·체중 관리"},
+{t:"고혈압 1기",r:"140~159 / 90~99",n:"진료 및 약물치료 평가"},
+{t:"고혈압 2기",r:"160~179 / 100~109",n:"신속한 진료와 약물치료"},
+{t:"고혈압 3기",r:"180 이상 / 110 이상",n:"빠른 의료 평가 필요"},
+{t:"고혈압 응급 위험",r:"180 이상 / 120 이상",n:"재측정·즉시 의료 평가, 증상 시 119"}];
+function zone(s,d){
+ var ss=s>=180?6:s>=160?5:s>=140?4:s>=130?3:s>=120?2:1;
+ var ds=d>=110?6:d>=100?5:d>=90?4:d>=85?3:d>=80?2:1;
+ var st=Math.max(ss,ds);
+ if(st===1)return(s<90&&d<60)?0:(s<90||d<60)?1:2;
+ if(st===6&&s>=180&&d>=120)return 8;
+ return st+1;
+}
+function level(s,d){var i=zone(s,d);return{t:ZONES[i].t,c:"var(--z"+i+")",i:i}}
+function renderZones(){
+ $("zones").innerHTML=ZONES.map(function(z,i){return '<div class="zrow"><i class="zchip" style="background:var(--z'+i+')"></i><div><b>'+z.t+' · '+z.r+'</b><span>'+z.n+'</span></div></div>'}).join("");
+}
+
+function renderTabs(){
+ $("tabs").innerHTML="";
+ RANGES.forEach(function(r){
+  var b=document.createElement("button");b.textContent=r.label;b.setAttribute("aria-pressed",r.k===cur);
+  b.onclick=function(){cur=r.k;renderTabs();renderChart()};$("tabs").appendChild(b);
+ });
+}
+
+var dayDate=dstr(new Date()),hourDays=30;
+function fit(xs,ys){
+ var n=xs.length,mx=avg(xs),my=avg(ys),sxx=0,sxy=0,i;
+ for(i=0;i<n;i++){sxx+=(xs[i]-mx)*(xs[i]-mx);sxy+=(xs[i]-mx)*(ys[i]-my)}
+ if(sxx===0)return null;
+ var b=sxy/sxx;return{a:my-b*mx,b:b};
+}
+function trendSvg(xs,S,D,X,Y,T,H,Bt){
+ if(cur==="hour"||xs.length<3||!$("tl").checked)return"";
+ var out="";
+ [[S,"var(--sys)"],[D,"var(--dia)"]].forEach(function(a){
+  var q=fit(xs,a[0]);if(!q)return;
+  var x1=xs[0],x2=xs[xs.length-1],cl=function(v){return Math.max(T,Math.min(H-Bt,Y(q.a+q.b*v)))};
+  out+='<line x1="'+X(x1)+'" y1="'+cl(x1)+'" x2="'+X(x2)+'" y2="'+cl(x2)+'" stroke="'+a[1]+'" stroke-width="2" stroke-dasharray="8 5"><title>추이선</title></line>';
+ });
+ return out;
+}
+function drawChart(pts,xmin,xmax,ticks,marks){
+ var W=chartW(),H=300,L=40,R=14,T=14,B=34,all=[80,140];
+ pts.forEach(function(p){all.push(p.s,p.d)});
+ var lo=Math.floor((Math.min.apply(null,all)-8)/10)*10,hi=Math.ceil((Math.max.apply(null,all)+8)/10)*10;
+ var X=function(v){return xmax===xmin?L+(W-L-R)/2:L+(v-xmin)*(W-L-R)/(xmax-xmin)};
+ var Y=function(v){return T+(hi-v)*(H-T-B)/(hi-lo)};
+ var g='';
+ [[0,90,1],[90,120,2],[120,130,3],[130,140,4],[140,160,5],[160,180,6],[180,999,7]].forEach(function(b){var a=Math.max(b[0],lo),c=Math.min(b[1],hi);if(c>a)g+='<rect x="'+L+'" y="'+Y(c)+'" width="'+(W-L-R)+'" height="'+(Y(a)-Y(c))+'" fill="var(--z'+b[2]+')" opacity=".14"/>'});
+ for(var v=lo;v<=hi;v+=20){g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="var(--line)"/><text x="'+(L-6)+'" y="'+(Y(v)+4)+'" text-anchor="end" font-size="11" fill="var(--mute)">'+v+'</text>'}
+ ticks.forEach(function(t){g+='<text x="'+X(t.v)+'" y="'+(H-10)+'" text-anchor="middle" font-size="11" fill="var(--mute)">'+t.label+'</text>'});
+ function ln(key,col){
+  var d=pts.map(function(p,i){return(i?"L":"M")+X(p.x).toFixed(1)+" "+Y(p[key]).toFixed(1)}).join(" ");
+  var s='<path d="'+d+'" fill="none" stroke="'+col+'" stroke-width="2.5" stroke-linejoin="round"/>';
+  pts.forEach(function(p){s+='<circle cx="'+X(p.x).toFixed(1)+'" cy="'+Y(p[key]).toFixed(1)+'" r="5" fill="var(--z'+zone(Math.round(p.s),Math.round(p.d))+')" stroke="'+col+'" stroke-width="2"><title>'+p.label+' · '+Math.round(p.s)+'/'+Math.round(p.d)+(p.n>1?' ('+p.n+'회)':'')+'</title></circle>'});
+  return s;
+ }
+ g+=ln("s","var(--sys)")+ln("d","var(--dia)");
+ g+=trendSvg(pts.map(function(p){return p.x}),pts.map(function(p){return p.s}),pts.map(function(p){return p.d}),X,Y,T,H,B);
+ marks.forEach(function(m){var cx=X(m.v),cy=H-B-2;g+='<path d="M'+(cx-5)+' '+cy+' L'+(cx+5)+' '+cy+' L'+cx+' '+(cy-9)+'Z" fill="var(--dia)"><title>'+esc(m.title)+'</title></path>'});
+ return '<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="혈압 추이 그래프">'+g+'</svg>';
+}
+function renderSpecial(){
+ var ctl=$("ctl"),bp=recs.filter(function(x){return !x.k}),pts=[],marks=[],ticks=[],data=[],note,i;
+ if(cur==="day"){
+  ctl.innerHTML='<button id="dprev" aria-label="전날">◀</button><input id="dpick" type="date" style="width:auto" value="'+dayDate+'"><button id="dnext" aria-label="다음날">▶</button>';
+  var shift=function(n){var d=new Date(dayDate+"T00:00");d.setDate(d.getDate()+n);dayDate=dstr(d);renderSpecial()};
+  $("dprev").onclick=function(){shift(-1)};$("dnext").onclick=function(){shift(1)};
+  $("dpick").onchange=function(){if(this.value){dayDate=this.value;renderSpecial()}};
+  data=bp.filter(function(x){return dstr(new Date(x.t))===dayDate}).sort(function(a,b){return a.t<b.t?-1:1});
+  data.forEach(function(x){var t=new Date(x.t);pts.push({x:t.getHours()+t.getMinutes()/60,s:x.s,d:x.d,n:1,label:pad(t.getHours())+":"+pad(t.getMinutes())})});
+  recs.forEach(function(x){if(x.k==="med"&&dstr(new Date(x.t))===dayDate){var t=new Date(x.t);marks.push({v:t.getHours()+t.getMinutes()/60,title:"복약 "+pad(t.getHours())+":"+pad(t.getMinutes())+(x.m?" "+x.m:"")})}});
+  for(i=0;i<=24;i+=3)ticks.push({v:i,label:i+"시"});
+  note=dayDate+" 하루의 측정값을 시간 순으로 보여줘요.";
+  var xmin=0,xmax=24;
+ } else if(cur==="d1"||cur==="d3"){
+  var hrs=cur==="d1"?24:72,to=new Date(),f0=new Date(to.getTime()-hrs*36e5),step=hrs===24?6:12;
+  data=bp.filter(function(x){var t=new Date(x.t);return t>=f0&&t<=to}).sort(function(a,b){return a.t<b.t?-1:1});
+  data.forEach(function(x){var t=new Date(x.t);pts.push({x:(t-f0)/36e5,s:x.s,d:x.d,n:1,label:(t.getMonth()+1)+"/"+t.getDate()+" "+pad(t.getHours())+":"+pad(t.getMinutes())})});
+  recs.forEach(function(x){if(x.k==="med"){var t=new Date(x.t);if(t>=f0&&t<=to)marks.push({v:(t-f0)/36e5,title:"복약 "+pad(t.getHours())+":"+pad(t.getMinutes())+(x.m?" "+x.m:"")})}});
+  for(i=0;i<=hrs;i+=step){var tt=new Date(f0.getTime()+i*36e5);ticks.push({v:i,label:(hrs===24?"":(tt.getDate()+"일 "))+pad(tt.getHours())+"시"})}
+  note="최근 "+(hrs/24)+"일("+hrs+"시간) 동안 잰 혈압을 하나씩 보여줘요.";
+  var xmin=0,xmax=hrs;
+ } else {
+  ctl.innerHTML='<label for="hsel" style="margin:0">기간</label><select id="hsel" style="font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px;min-height:40px">'+[[30,"최근 30일"],[90,"최근 90일"],[365,"최근 1년"],[0,"전체"]].map(function(o){return '<option value="'+o[0]+'"'+(o[0]===hourDays?' selected':'')+'>'+o[1]+'</option>'}).join("")+'</select>';
+  $("hsel").onchange=function(){hourDays=parseInt(this.value,10);renderSpecial()};
+  var from=null;if(hourDays){from=new Date();from.setHours(0,0,0,0);from.setDate(from.getDate()-hourDays+1)}
+  data=bp.filter(function(x){return !from||new Date(x.t)>=from});
+  var hb={};data.forEach(function(x){var h=new Date(x.t).getHours();hb[h]=hb[h]||{s:[],d:[]};hb[h].s.push(x.s);hb[h].d.push(x.d)});
+  Object.keys(hb).map(Number).sort(function(a,b){return a-b}).forEach(function(h){pts.push({x:h,s:avg(hb[h].s),d:avg(hb[h].d),n:hb[h].s.length,label:h+"시"})});
+  for(i=0;i<=21;i+=3)ticks.push({v:i,label:i+"시"});
+  note="하루 중 시간대(0~23시)별 평균 혈압이에요. 같은 시각에 잰 기록을 평균내서 아침·저녁 패턴을 볼 수 있어요.";
+  var xmin=0,xmax=23;
+ }
+ $("bucketnote").textContent=note;
+ if(!data.length){$("stats").innerHTML="";$("chart").innerHTML='<div class="empty">이 기간에 혈압 기록이 없어요.</div>';return}
+ var S=data.map(function(x){return x.s}),D=data.map(function(x){return x.d});
+ var second=["최고",Math.max.apply(null,S)+" / "+Math.max.apply(null,D)];
+ if(cur==="hour"){var top=pts.slice().sort(function(a,b){return b.s-a.s})[0];second=["수축기 가장 높은 시간",top.label+" ("+Math.round(top.s)+")"]}
+ $("stats").innerHTML=[["평균",Math.round(avg(S))+" / "+Math.round(avg(D))],second,["측정 횟수",data.length+"회"]].map(function(a){return '<div class="stat"><span>'+a[0]+'</span><b>'+a[1]+'</b></div>'}).join("");
+ $("chart").innerHTML=drawChart(pts,xmin,xmax,ticks,marks);
+}
+function renderChart(){
+ $("ctl").innerHTML="";
+ if(cur==="day"||cur==="hour"||cur==="d1"||cur==="d3"){renderSpecial();return}
+ var r=RANGES.filter(function(x){return x.k===cur})[0];
+ var data=inRange(r);
+ $("bucketnote").textContent=BN[r.b]+"으로 표시돼요 (최근 "+r.label+").";
+ if(!data.length){$("stats").innerHTML="";$("chart").innerHTML='<div class="empty">이 기간에 기록이 없어요. 위에서 측정값을 입력해 보세요.</div>';return}
+ var S=data.map(function(x){return x.s}),D=data.map(function(x){return x.d});
+ $("stats").innerHTML=[["평균",Math.round(avg(S))+" / "+Math.round(avg(D))],["최고",Math.max.apply(null,S)+" / "+Math.max.apply(null,D)],["측정 횟수",data.length+"회"]]
+  .map(function(a){return '<div class="stat"><span>'+a[0]+'</span><b>'+a[1]+'</b></div>'}).join("");
+ var map={},order=[];
+ data.forEach(function(x){var b=bucket(new Date(x.t),r.b);if(!map[b.key]){map[b.key]={label:b.label,s:[],d:[]};order.push(b.key)}map[b.key].s.push(x.s);map[b.key].d.push(x.d)});
+ order.sort();
+ var pts=order.map(function(k){return{label:map[k].label,s:avg(map[k].s),d:avg(map[k].d),n:map[k].s.length}});
+ var W=chartW(),H=300,L=40,R=14,T=14,B=34;
+ var all=pts.map(function(p){return p.s}).concat(pts.map(function(p){return p.d})).concat([80,140]);
+ var lo=Math.floor((Math.min.apply(null,all)-8)/10)*10,hi=Math.ceil((Math.max.apply(null,all)+8)/10)*10;
+ var X=function(i){return pts.length===1?(L+(W-L-R)/2):L+i*(W-L-R)/(pts.length-1)};
+ var Y=function(v){return T+(hi-v)*(H-T-B)/(hi-lo)};
+ var g='';
+ [[0,90,1],[90,120,2],[120,130,3],[130,140,4],[140,160,5],[160,180,6],[180,999,7]].forEach(function(b){var a=Math.max(b[0],lo),c=Math.min(b[1],hi);if(c>a)g+='<rect x="'+L+'" y="'+Y(c)+'" width="'+(W-L-R)+'" height="'+(Y(a)-Y(c))+'" fill="var(--z'+b[2]+')" opacity=".14"/>'});
+ for(var v=lo;v<=hi;v+=20){g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" stroke="var(--line)"/><text x="'+(L-6)+'" y="'+(Y(v)+4)+'" text-anchor="end" font-size="11" fill="var(--mute)">'+v+'</text>'}
+ [[120,"var(--warn)"],[80,"var(--warn)"],[140,"var(--sys)"],[90,"var(--sys)"]].forEach(function(a){
+  if(a[0]>=lo&&a[0]<=hi)g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(a[0])+'" y2="'+Y(a[0])+'" stroke="'+a[1]+'" stroke-dasharray="4 4" opacity=".55"/>'});
+ var step=Math.ceil(pts.length/8);
+ pts.forEach(function(p,i){if(i%step===0||i===pts.length-1)g+='<text x="'+X(i)+'" y="'+(H-10)+'" text-anchor="middle" font-size="11" fill="var(--mute)">'+p.label+'</text>'});
+ function line(key,col){
+  var d=pts.map(function(p,i){return(i?"L":"M")+X(i).toFixed(1)+" "+Y(p[key]).toFixed(1)}).join(" ");
+  var s='<path d="'+d+'" fill="none" stroke="'+col+'" stroke-width="2.5" stroke-linejoin="round"/>';
+  pts.forEach(function(p,i){s+='<circle cx="'+X(i).toFixed(1)+'" cy="'+Y(p[key]).toFixed(1)+'" r="5" fill="var(--z'+zone(Math.round(p.s),Math.round(p.d))+')" stroke="'+col+'" stroke-width="2"><title>'+p.label+' · '+Math.round(p.s)+'/'+Math.round(p.d)+' ('+p.n+'회)</title></circle>'});
+  return s;
+ }
+ g+=line("s","var(--sys)")+line("d","var(--dia)");
+ g+=trendSvg(pts.map(function(p,i){return i}),pts.map(function(p){return p.s}),pts.map(function(p){return p.d}),X,Y,T,H,B);
+ var mc={};medsIn(r).forEach(function(x){var k=bucket(new Date(x.t),r.b).key;mc[k]=(mc[k]||0)+1});
+ order.forEach(function(k,i){if(mc[k])g+='<path d="M'+(X(i)-5)+' '+(H-B-2)+' L'+(X(i)+5)+' '+(H-B-2)+' L'+X(i)+' '+(H-B-11)+'Z" fill="var(--dia)"><title>복약 '+mc[k]+'회</title></path>'});
+ var vm={};
+ visitsIn(r).forEach(function(x){
+  var k=bucket(new Date(x.t),r.b).key,idx=-1;
+  if(k<order[0])return;
+  for(var j=0;j<order.length;j++){if(order[j]>=k){idx=j;break}}
+  if(idx<0)return;
+  var p=[x.h,x.dis&&"병명: "+x.dis,x.drug&&"약: "+x.drug,x.n&&"주의: "+x.n].filter(Boolean).join(", ");
+  (vm[idx]=vm[idx]||[]).push(dstr(new Date(x.t))+" "+p);
+ });
+ Object.keys(vm).forEach(function(i){
+  var cx=X(+i),cy=T+7;
+  g+='<line x1="'+cx+'" x2="'+cx+'" y1="'+T+'" y2="'+(H-B)+'" stroke="var(--z8)" stroke-dasharray="3 3" opacity=".55"/><path d="M'+cx+' '+(cy-7)+' L'+(cx+7)+' '+cy+' L'+cx+' '+(cy+7)+' L'+(cx-7)+' '+cy+'Z" fill="var(--z8)"><title>진료 '+esc(vm[i].join(" / "))+'</title></path>';
+ });
+ $("chart").innerHTML='<svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="혈압 추이 그래프">'+g+'</svg>';
+}
+
+function renderList(){
+ var a=recs.slice().sort(function(x,y){return x.t<y.t?1:-1}).slice(0,50);
+ if(!a.length){$("list").innerHTML='<div class="empty">아직 기록이 없어요.</div>';return}
+ var h='<div style="overflow-x:auto"><table><thead><tr><th>일시</th><th>혈압/복약</th><th>맥박</th><th>상태</th><th>메모</th><th></th></tr></thead><tbody>';
+ a.forEach(function(x){
+  var dt=new Date(x.t),ds=dt.getFullYear()+'.'+pad(dt.getMonth()+1)+'.'+pad(dt.getDate())+' '+pad(dt.getHours())+':'+pad(dt.getMinutes());
+  if(x.k==="visit"){var vp=[x.h,x.dis&&"병명: "+x.dis,x.drug&&"약: "+x.drug,x.n&&"주의: "+x.n].filter(Boolean).join(" · ");h+='<tr><td>'+ds+'</td><td><span class="tag" style="color:var(--ink)">진료</span></td><td></td><td></td><td>'+esc(vp)+'</td><td><button data-id="'+x.id+'" aria-label="삭제">삭제</button></td></tr>';return}
+  if(x.k==="med"){h+='<tr><td>'+ds+'</td><td><span class="tag" style="color:var(--dia)">복약</span></td><td></td><td></td><td>'+esc((x.m||"")+(x.n?(x.m?" · ":"")+x.n:""))+'</td><td><button data-id="'+x.id+'" aria-label="삭제">삭제</button></td></tr>';return}
+  var l=level(x.s,x.d);
+  h+='<tr><td>'+dt.getFullYear()+'.'+pad(dt.getMonth()+1)+'.'+pad(dt.getDate())+' '+pad(dt.getHours())+':'+pad(dt.getMinutes())+'</td><td><b>'+x.s+'/'+x.d+'</b></td><td>'+(x.p||"-")+'</td><td><span class="tag" style="color:'+l.c+'">'+l.t+'</span></td><td>'+esc(x.m||"")+sinceMed(x)+'</td><td><button data-id="'+x.id+'" aria-label="삭제">삭제</button></td></tr>';
+ });
+ $("list").innerHTML=h+'</tbody></table></div>'+(recs.length>50?'<p class="note">최근 50건만 표시돼요.</p>':"");
+ Array.prototype.forEach.call($("list").querySelectorAll("button[data-id]"),function(b){var eb=document.createElement("button");eb.textContent="수정";eb.setAttribute("aria-label","수정");eb.style.marginRight="6px";b.parentNode.style.whiteSpace="nowrap";b.parentNode.insertBefore(eb,b);eb.onclick=function(){startEdit(b.dataset.id)};b.onclick=function(){var id=b.dataset.id,tr=b.closest("tr"),label=tr.cells[0].textContent+" "+tr.cells[1].textContent;askDel(delMsgs(label),function(){if(edit&&String(edit.id)===id)cancelEdit();recs=recs.filter(function(r){return String(r.id)!==id});persist();refresh()})}});
+}
+function esc(s){return s.replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function sinceMed(x){
+ var best=null;recs.forEach(function(r){if(r.k==="med"&&r.t<x.t&&(!best||r.t>best.t))best=r});
+ if(!best)return"";
+ var h=(new Date(x.t)-new Date(best.t))/36e5;if(h>24)return"";
+ return (x.m?" · ":"")+"복약 후 "+(h<1?Math.round(h*60)+"분":(Math.round(h*10)/10)+"시간");
+}
+function refresh(){renderChart();renderList()}
+$("medsave").onclick=function(){
+ var t=getDT("mdt"),m=$("mmsg");
+ if(!t){m.textContent="약 먹은 시간을 입력해 주세요.";return}
+ upsert({id:Date.now()+Math.random(),k:"med",t:new Date(t).toISOString(),m:$("mname").value.trim(),n:$("mnote").value.trim()},"med");
+ persist();$("mname").value="";$("mnote").value="";setDT("mdt");m.textContent="저장했어요.";refresh();
+};
+
+var edit=null;
+var BTN={bp:["save","저장","msg"],med:["medsave","복약 시간 저장","mmsg"],visit:["vsave","진료 기록 저장","vmsg"]};
+function editUI(k,on){
+ var b=$(BTN[k][0]),c=$("c_"+k);
+ b.textContent=on?"수정 저장":BTN[k][1];
+ $(BTN[k][2]).textContent=on?"기록을 수정하는 중이에요.":"";
+ if(on&&!c){c=document.createElement("button");c.id="c_"+k;c.textContent="수정 취소";c.style.cssText="width:100%;margin-top:8px";c.onclick=function(){cancelEdit()};b.parentNode.insertBefore(c,b.nextSibling)}
+ if(!on&&c)c.remove();
+}
+function clearForm(k){
+ var clr=function(a){a.forEach(function(i){$(i).value=""})};
+ if(k==="bp"){clr(["sys","dia","pul","memo"]);setDT("dt")}
+ else if(k==="med"){clr(["mname","mnote"]);setDT("mdt")}
+ else{clr(["vhosp","vdis","vdrug","vnote"]);setDT("vdt")}
+}
+function cancelEdit(){if(!edit)return;var k=edit.k;edit=null;editUI(k,false);clearForm(k)}
+function upsert(r,k){
+ if(edit&&edit.k===k){
+  r.id=edit.id;
+  for(var i=0;i<recs.length;i++){if(recs[i].id===edit.id){recs[i]=r;break}}
+  edit=null;editUI(k,false);
+ } else recs.push(r);
+}
+function startEdit(id){
+ var r=null;recs.forEach(function(x){if(String(x.id)===id)r=x});
+ if(!r)return;
+ if(edit)cancelEdit();
+ var k=r.k||"bp",dt=new Date(r.t),f;
+ edit={id:r.id,k:k};
+ if(k==="bp"){setDT("dt",dt);$("sys").value=r.s;$("dia").value=r.d;$("pul").value=r.p||"";$("memo").value=r.m||"";f=$("sys")}
+ else if(k==="med"){setDT("mdt",dt);$("mname").value=r.m||"";$("mnote").value=r.n||"";f=$("mname")}
+ else{setDT("vdt",dt);$("vhosp").value=r.h||"";$("vdis").value=r.dis||"";$("vdrug").value=r.drug||"";$("vnote").value=r.n||"";f=$("vdis")}
+ editUI(k,true);
+ f.scrollIntoView({behavior:"smooth",block:"center"});f.focus();
+}
+var THEMES=[{n:"연한 회색(기존 기본)",c:"#F3F6F5"},{n:"검정",c:"#000000"},{n:"집은 파랑",c:"#0063B1"},{n:"파랑",c:"#0000FF"},{n:"초록",c:"#009944"},{n:"회색",c:"#535353"},{n:"살구",c:"#F29B76"},{n:"주황",c:"#EB6100"},{n:"갈색",c:"#A84200"},{n:"남색",c:"#004986"}];
+function getTheme(){try{return localStorage.getItem("bp-theme")||"#004986"}catch(e){return"#004986"}}
+function lum(h){var v=[1,3,5].map(function(i){var c=parseInt(h.substr(i,2),16)/255;return c<=0.03928?c/12.92:Math.pow((c+0.055)/1.055,2.4)});return 0.2126*v[0]+0.7152*v[1]+0.0722*v[2]}
+function applyTheme(c){
+ var r=document.documentElement,st=r.style;
+ if(!c){["--bg","--card","--ink","--mute","--line","--accent","--accent-ink","color-scheme"].forEach(function(p){st.removeProperty(p)});r.classList.remove("custom");return}
+ var L=lum(c),white=1.05/(L+0.05)>(L+0.05)/0.05,ink=white?"#ffffff":"#000000";
+ r.classList.add("custom");
+ st.setProperty("--bg",c);st.setProperty("--ink",ink);
+ st.setProperty("--card",white?"rgba(255,255,255,.10)":"rgba(255,255,255,.42)");
+ st.setProperty("--mute",white?"rgba(255,255,255,.78)":"rgba(0,0,0,.70)");
+ st.setProperty("--line",white?"rgba(255,255,255,.30)":"rgba(0,0,0,.28)");
+ st.setProperty("--accent",ink);st.setProperty("--accent-ink",c);st.setProperty("color-scheme",white?"dark":"light");
+}
+function setTheme(c){try{localStorage.setItem("bp-theme",c)}catch(e){}applyTheme(c);renderThemes()}
+function renderThemes(){
+ var cur=getTheme(),box=$("swatches");box.innerHTML="";
+ 
+ THEMES.forEach(function(t){
+  var b=document.createElement("button");b.className="sw";b.style.background=t.c;b.title=t.n;b.setAttribute("aria-label",t.n+" 배경");b.setAttribute("aria-pressed",cur===t.c);
+  b.onclick=function(){setTheme(t.c)};box.appendChild(b);
+ });
+}
+$("bkout").onclick=async function(){
+ var m=$("bkmsg"),dl=null;
+ try{dl=window.claude?await window.claude.use("downloads"):null}catch(e){dl=null}
+ if(!dl){
+  try{var bl=new Blob([JSON.stringify({app:"혈압측정기록지",v:1,saved:new Date().toISOString(),records:recs},null,1)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(bl);a.download="혈압측정기록지_백업_"+dstr(new Date())+".json";document.body.appendChild(a);a.click();a.remove();m.textContent="백업 파일을 만들었어요. 다운로드 폴더를 확인해 주세요."}
+  catch(e){m.textContent="이 화면에서는 파일 저장을 쓸 수 없어요."}
+  return;
+ }
+ try{await dl.save({filename:"혈압측정기록지_백업_"+dstr(new Date())+".json",data:JSON.stringify({app:"혈압측정기록지",v:1,saved:new Date().toISOString(),records:recs},null,1)});m.textContent="백업 파일을 저장했어요."}
+ catch(e){m.textContent=(e&&e.code==="declined")?"저장을 취소했어요.":"파일을 저장하지 못했어요."}
+};
+$("bkin").onclick=function(){$("bkfile").click()};
+$("bkfile").onchange=function(){
+ var f=this.files&&this.files[0],m=$("bkmsg"),inp=this;
+ if(!f)return;
+ var rd=new FileReader();
+ rd.onload=function(){
+  try{
+   var o=JSON.parse(rd.result),a=Array.isArray(o)?o:o.records;
+   if(!Array.isArray(a))throw 0;
+   var ids={},n=0,S=function(v,l){return String(v==null?"":v).slice(0,l)};
+   recs.forEach(function(r){ids[r.id]=1});
+   a.forEach(function(r){
+    if(!r||typeof r!=="object"||!r.t||isNaN(new Date(r.t)))return;
+    var id=(typeof r.id==="number"&&isFinite(r.id))?r.id:Date.now()+Math.random();
+    if(ids[id])return;
+    var nr={id:id,t:new Date(r.t).toISOString()};
+    if(r.k==="med"){nr.k="med";nr.m=S(r.m,40);nr.n=S(r.n,120)}
+    else if(r.k==="visit"){nr.k="visit";nr.h=S(r.h,40);nr.dis=S(r.dis,40);nr.drug=S(r.drug,60);nr.n=S(r.n,200)}
+    else{var s=Math.round(+r.s),d=Math.round(+r.d);if(!(s>=60&&s<=260&&d>=30&&d<=160))return;nr.s=s;nr.d=d;nr.p=(r.p!=null&&r.p!==""&&isFinite(+r.p))?Math.round(+r.p):null;nr.m=S(r.m,60)}
+    ids[id]=1;recs.push(nr);n++;
+   });
+   persist();refresh();m.textContent=n+"건을 불러왔어요. (이미 있는 기록은 건너뛰었어요)";
+  }catch(e){m.textContent="올바른 백업 파일이 아니에요."}
+  inp.value="";
+ };
+ rd.readAsText(f);
+};
+function chartW(){var w=$("chart").clientWidth;return w>0?Math.max(320,Math.min(640,Math.round(w))):640}
+window.addEventListener("resize",function(){renderChart()});
+function opts(n,u){var s="";for(var i=0;i<n;i++)s+='<option value="'+pad(i)+'">'+pad(i)+u+'</option>';return s}
+function fillTimeOpts(){["dt","mdt","vdt"].forEach(function(p){$(p+"h").innerHTML=opts(24,"시");$(p+"m").innerHTML=opts(60,"분")})}
+function getDT(id){var d=$(id).value;return d?d+"T"+$(id+"h").value+":"+$(id+"m").value:""}
+function setDT(id,dt){var n=dt||new Date();$(id).value=dstr(n);$(id+"h").value=pad(n.getHours());$(id+"m").value=pad(n.getMinutes())}
+$("vsave").onclick=function(){
+ var d=$("vdt").value,m=$("vmsg"),h=$("vhosp").value.trim(),dis=$("vdis").value.trim(),drug=$("vdrug").value.trim(),note=$("vnote").value.trim();
+ if(!d){m.textContent="진료 날짜를 입력해 주세요.";return}
+ if(!h&&!dis&&!drug&&!note){m.textContent="병원, 병명, 약 이름, 주의사항 중 하나 이상 입력해 주세요.";return}
+ upsert({id:Date.now()+Math.random(),k:"visit",t:new Date(getDT("vdt")).toISOString(),h:h,dis:dis,drug:drug,n:note},"visit");
+ persist();["vhosp","vdis","vdrug","vnote"].forEach(function(i){$(i).value=""});setDT("vdt");m.textContent="저장했어요.";refresh();
+};
+$("save").onclick=function(){
+ var s=parseInt($("sys").value,10),d=parseInt($("dia").value,10),p=parseInt($("pul").value,10),t=getDT("dt");
+ var m=$("msg");
+ if(!t){m.textContent="측정 일시를 입력해 주세요.";return}
+ if(!(s>=60&&s<=260)||!(d>=30&&d<=160)){m.textContent="수축기(60~260)와 이완기(30~160) 값을 확인해 주세요.";return}
+ if(s<=d){m.textContent="수축기 혈압은 이완기보다 커야 해요.";return}
+ upsert({id:Date.now()+Math.random(),t:new Date(t).toISOString(),s:s,d:d,p:isNaN(p)?null:p,m:$("memo").value.trim()},"bp");
+ persist();$("sys").value="";$("dia").value="";$("pul").value="";$("memo").value="";
+ setDT("dt");var zz=ZONES[zone(s,d)];m.textContent="저장했어요. "+zz.t+": "+zz.n;refresh();
+};
+$("demo").onclick=function(){
+ var now=new Date(),out=[];
+ for(var i=0;i<3650;i+=2){
+  var d=new Date(now);d.setDate(d.getDate()-i);d.setHours(8,Math.floor(Math.random()*30),0,0);
+  var drift=(i/3650)*-10+Math.sin(i/45)*5;
+  out.push({id:Date.now()+i+Math.random(),t:d.toISOString(),s:Math.round(128-drift+(Math.random()*12-6)),d:Math.round(82-drift/2+(Math.random()*8-4)),p:Math.round(68+Math.random()*10),m:"예시"});
+ }
+ recs=recs.concat(out);persist();refresh();
+};
+var cstep=0;
+var CMSG=["1/3 · 모든 기록을 삭제할까요?","2/3 · 진짜 삭제할까요? 혈압·복약·진료 기록이 모두 사라져요.","3/3 · 정말 삭제해요? 삭제하면 되돌릴 수 없어요."];
+var CBTN=["계속","네, 계속 진행","네, 전부 삭제"];
+function cshow(){
+ var p=$("cpanel");
+ if(!cstep){p.style.display="none";return}
+ p.style.display="block";$("cmsg").textContent=cm[cstep-1];$("cyes").textContent=CBTN[cstep-1];
+ $("cyes").style.cssText=cstep===3?"background:var(--z7);color:#fff;border-color:var(--z7);font-weight:700":"";
+ $("cno").focus();p.scrollIntoView({block:"nearest",behavior:"smooth"});
+}
+var cm=CMSG,cact=null;
+function askDel(m,fn){cm=m;cact=fn;cstep=1;cshow()}
+function delMsgs(l){return["1/3 · ["+l+"] 기록을 삭제할까요?","2/3 · 진짜 삭제할까요? ["+l+"]","3/3 · 정말 삭제해요? 삭제하면 되돌릴 수 없어요. ["+l+"]"]}
+$("clear").onclick=function(){askDel(CMSG,function(){cancelEdit();recs=[];persist();refresh()})};
+$("cno").onclick=function(){cstep=0;cshow()};
+$("cyes").onclick=function(){if(cstep<3){cstep++;cshow()}else{var f=cact;cstep=0;cshow();if(f)f()}};
+
+load();applyTheme(getTheme());renderThemes();$("tl").onchange=function(){renderChart()};fillTimeOpts();setDT("dt");setDT("mdt");setDT("vdt");renderZones();renderTabs();refresh();
+})();
+</script>
+<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})})}</script>
+</body>
+</html>
