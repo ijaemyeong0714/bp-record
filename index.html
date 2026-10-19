@@ -26,7 +26,7 @@ h2{font-size:1.05rem;margin:0 0 12px}
 .sub{color:var(--mute);margin:0 0 20px;font-size:.9rem}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:16px}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
-@media(min-width:560px){.grid.g4{grid-template-columns:repeat(4,1fr)}}
+.grid.g4{grid-template-columns:repeat(3,1fr)}
 label{display:block;font-size:.82rem;color:var(--mute);margin-bottom:4px}
 input{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;min-height:44px}
 input:focus-visible,button:focus-visible{outline:2px solid var(--dia);outline-offset:2px}
@@ -58,9 +58,9 @@ th{color:var(--mute);font-weight:500;font-size:.8rem}
 .zrow span{font-size:.8rem;color:var(--mute)}
 select{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;min-height:44px}
 select:focus-visible{outline:2px solid var(--dia);outline-offset:2px}
-.tm{display:flex;gap:6px}
-.tm input{flex:1.6;min-width:0}
-.tm select{flex:1;min-width:0}
+.tm{display:flex;flex-wrap:wrap;gap:6px}
+.tm input{flex:1 1 100%;min-width:0}
+.tm select{flex:1 1 90px;min-width:0;padding:10px 6px}
 :root.custom{--z0:#1d4e9e;--z1:#3a8fd6;--z2:#2f8f5b;--z3:#86a82a;--z4:#d9a21c;--z5:#e0742a;--z6:#d4452f;--z7:#b3202f;--z8:#7a1f6b}
 .custom .tag{background:#fff}
 .custom .legend span{color:var(--ink)!important}
@@ -84,11 +84,11 @@ select:focus-visible{outline:2px solid var(--dia);outline-offset:2px}
 <section class="card" aria-labelledby="h-in">
 <h2 id="h-in">측정값 입력</h2>
 <div class="grid g4">
-<div class="full"><label for="dt">측정 날짜·시간</label><div class="tm"><input id="dt" type="date"><select id="dth" aria-label="시"></select><select id="dtm" aria-label="분"></select></div></div>
+<div class="full"><label for="dt">측정 날짜·시간</label><div class="tm"><input id="dt" type="date"><select id="dth" aria-label="시"></select><select id="dtm" aria-label="분"></select><button type="button" data-now="dt" style="flex:none">지금</button></div></div>
 <div><label for="sys">수축기(최고)</label><input id="sys" type="number" inputmode="numeric" min="60" max="260" placeholder="120"></div>
 <div><label for="dia">이완기(최저)</label><input id="dia" type="number" inputmode="numeric" min="30" max="160" placeholder="80"></div>
 <div><label for="pul">맥박(선택)</label><input id="pul" type="number" inputmode="numeric" min="30" max="220" placeholder="70"></div>
-<div style="grid-column:span 3"><label for="memo">메모(선택)</label><input id="memo" type="text" maxlength="60" placeholder="아침 식전, 운동 후 등"></div>
+<div class="full"><label for="memo">메모(선택)</label><input id="memo" type="text" maxlength="60" placeholder="아침 식전, 운동 후 등"></div>
 </div>
 <button class="primary" id="save">저장</button>
 <div class="note" id="msg" role="status"></div>
@@ -97,7 +97,7 @@ select:focus-visible{outline:2px solid var(--dia);outline-offset:2px}
 <section class="card" aria-labelledby="h-md">
 <h2 id="h-md">복약 기록</h2>
 <div class="grid">
-<div class="full"><label for="mdt">약 먹은 날짜·시간</label><div class="tm"><input id="mdt" type="date"><select id="mdth" aria-label="시"></select><select id="mdtm" aria-label="분"></select></div></div>
+<div class="full"><label for="mdt">약 먹은 날짜·시간</label><div class="tm"><input id="mdt" type="date"><select id="mdth" aria-label="시"></select><select id="mdtm" aria-label="분"></select><button type="button" data-now="mdt" style="flex:none">지금</button></div></div>
 <div><label for="mname">약 이름(선택)</label><input id="mname" type="text" maxlength="40" placeholder="예: 아침약"></div>
 <div class="full"><label for="mnote">메모·주의사항(선택)</label><input id="mnote" type="text" maxlength="120" placeholder="예: 식후 30분, 복용 시 주의할 점"></div>
 </div>
@@ -108,7 +108,7 @@ select:focus-visible{outline:2px solid var(--dia);outline-offset:2px}
 <section class="card" aria-labelledby="h-vs">
 <h2 id="h-vs">병원 진료 기록</h2>
 <div class="grid">
-<div class="full"><label for="vdt">진료 날짜·시간</label><div class="tm"><input id="vdt" type="date"><select id="vdth" aria-label="시"></select><select id="vdtm" aria-label="분"></select></div></div>
+<div class="full"><label for="vdt">진료 날짜·시간</label><div class="tm"><input id="vdt" type="date"><select id="vdth" aria-label="시"></select><select id="vdtm" aria-label="분"></select><button type="button" data-now="vdt" style="flex:none">지금</button></div></div>
 <div><label for="vhosp">병원·진료과(선택)</label><input id="vhosp" type="text" maxlength="40" placeholder="예: ○○내과"></div>
 <div><label for="vdis">병명</label><input id="vdis" type="text" maxlength="40" placeholder="진단받은 병명"></div>
 <div><label for="vdrug">처방 약 이름</label><input id="vdrug" type="text" maxlength="60" placeholder="처방전에 적힌 약 이름"></div>
@@ -416,7 +416,7 @@ $("medsave").onclick=function(){
  var t=getDT("mdt"),m=$("mmsg");
  if(!t){m.textContent="약 먹은 시간을 입력해 주세요.";return}
  upsert({id:Date.now()+Math.random(),k:"med",t:new Date(t).toISOString(),m:$("mname").value.trim(),n:$("mnote").value.trim()},"med");
- persist();$("mname").value="";$("mnote").value="";setDT("mdt");m.textContent="저장했어요.";refresh();
+ persist();$("mname").value="";$("mnote").value="";rememberDT("mdt");m.textContent="저장했어요.";refresh();
 };
 
 var edit=null;
@@ -430,9 +430,9 @@ function editUI(k,on){
 }
 function clearForm(k){
  var clr=function(a){a.forEach(function(i){$(i).value=""})};
- if(k==="bp"){clr(["sys","dia","pul","memo"]);setDT("dt")}
- else if(k==="med"){clr(["mname","mnote"]);setDT("mdt")}
- else{clr(["vhosp","vdis","vdrug","vnote"]);setDT("vdt")}
+ if(k==="bp"){clr(["sys","dia","pul","memo"]);restoreDT("dt")}
+ else if(k==="med"){clr(["mname","mnote"]);restoreDT("mdt")}
+ else{clr(["vhosp","vdis","vdrug","vnote"]);restoreDT("vdt")}
 }
 function cancelEdit(){if(!edit)return;var k=edit.k;edit=null;editUI(k,false);clearForm(k)}
 function upsert(r,k){
@@ -520,13 +520,16 @@ window.addEventListener("resize",function(){renderChart()});
 function opts(n,u){var s="";for(var i=0;i<n;i++)s+='<option value="'+pad(i)+'">'+pad(i)+u+'</option>';return s}
 function fillTimeOpts(){["dt","mdt","vdt"].forEach(function(p){$(p+"h").innerHTML=opts(24,"시");$(p+"m").innerHTML=opts(60,"분")})}
 function getDT(id){var d=$(id).value;return d?d+"T"+$(id+"h").value+":"+$(id+"m").value:""}
+function rememberDT(id){try{var o=JSON.parse(localStorage.getItem("bp-lastdt")||"{}");o[id]=getDT(id);localStorage.setItem("bp-lastdt",JSON.stringify(o))}catch(e){}}
+function restoreDT(id){var v="";try{v=(JSON.parse(localStorage.getItem("bp-lastdt")||"{}"))[id]||""}catch(e){}var d=v?new Date(v):null;setDT(id,d&&!isNaN(d)?d:null)}
+function bindNow(){Array.prototype.forEach.call(document.querySelectorAll("[data-now]"),function(b){b.onclick=function(){setDT(b.dataset.now)}})}
 function setDT(id,dt){var n=dt||new Date();$(id).value=dstr(n);$(id+"h").value=pad(n.getHours());$(id+"m").value=pad(n.getMinutes())}
 $("vsave").onclick=function(){
  var d=$("vdt").value,m=$("vmsg"),h=$("vhosp").value.trim(),dis=$("vdis").value.trim(),drug=$("vdrug").value.trim(),note=$("vnote").value.trim();
  if(!d){m.textContent="진료 날짜를 입력해 주세요.";return}
  if(!h&&!dis&&!drug&&!note){m.textContent="병원, 병명, 약 이름, 주의사항 중 하나 이상 입력해 주세요.";return}
  upsert({id:Date.now()+Math.random(),k:"visit",t:new Date(getDT("vdt")).toISOString(),h:h,dis:dis,drug:drug,n:note},"visit");
- persist();["vhosp","vdis","vdrug","vnote"].forEach(function(i){$(i).value=""});setDT("vdt");m.textContent="저장했어요.";refresh();
+ persist();["vhosp","vdis","vdrug","vnote"].forEach(function(i){$(i).value=""});rememberDT("vdt");m.textContent="저장했어요.";refresh();
 };
 $("save").onclick=function(){
  var s=parseInt($("sys").value,10),d=parseInt($("dia").value,10),p=parseInt($("pul").value,10),t=getDT("dt");
@@ -536,7 +539,7 @@ $("save").onclick=function(){
  if(s<=d){m.textContent="수축기 혈압은 이완기보다 커야 해요.";return}
  upsert({id:Date.now()+Math.random(),t:new Date(t).toISOString(),s:s,d:d,p:isNaN(p)?null:p,m:$("memo").value.trim()},"bp");
  persist();$("sys").value="";$("dia").value="";$("pul").value="";$("memo").value="";
- setDT("dt");var zz=ZONES[zone(s,d)];m.textContent="저장했어요. "+zz.t+": "+zz.n;refresh();
+ rememberDT("dt");var zz=ZONES[zone(s,d)];m.textContent="저장했어요. "+zz.t+": "+zz.n;refresh();
 };
 $("demo").onclick=function(){
  var now=new Date(),out=[];
@@ -564,7 +567,7 @@ $("clear").onclick=function(){askDel(CMSG,function(){cancelEdit();recs=[];persis
 $("cno").onclick=function(){cstep=0;cshow()};
 $("cyes").onclick=function(){if(cstep<3){cstep++;cshow()}else{var f=cact;cstep=0;cshow();if(f)f()}};
 
-load();applyTheme(getTheme());renderThemes();$("tl").onchange=function(){renderChart()};fillTimeOpts();setDT("dt");setDT("mdt");setDT("vdt");renderZones();renderTabs();refresh();
+load();applyTheme(getTheme());renderThemes();$("tl").onchange=function(){renderChart()};fillTimeOpts();restoreDT("dt");restoreDT("mdt");restoreDT("vdt");bindNow();renderZones();renderTabs();refresh();
 })();
 </script>
 <script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})})}</script>
