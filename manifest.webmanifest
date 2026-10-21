@@ -1,6 +1,6 @@
 {
  "name": "혈압측정기록지",
- "short_name": "혈압기록",
+ "short_name": "혈압기록지",
  "start_url": "./index.html",
  "scope": "./",
  "display": "standalone",
